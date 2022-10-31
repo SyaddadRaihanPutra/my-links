@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="bumblebee">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syaddad Raihan Putra</title>
+
+    <link rel="icon" href="profile.jpg" type="image/x-icon" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.36.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        .responsive {
+            max-width: 500px;
+            margin: 0px auto;
+        }
+
+        .icon {
+            font-size: 20px;
+            font-weight: 500;
+        }
+    </style>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAUAtnnEk9ATx2Lk6if3_2DoOTEm18kYBg",
+            authDomain: "syaddad-3d71e.firebaseapp.com",
+            projectId: "syaddad-3d71e",
+            storageBucket: "syaddad-3d71e.appspot.com",
+            messagingSenderId: "713502565405",
+            appId: "1:713502565405:web:f887c99f3c1979246d12f4",
+            measurementId: "G-V1PFQK3BT4"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</head>
+
+<body>
+    <div class="responsive">
+        <div class="text-center mt-10">
+            <div class="avatar">
+                <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <img src="profile.jpg" />
+                </div>
+            </div>
+        </div>
+
+        <p class="text-2xl text-center mt-10">Syaddad Raihan Putra</p>
+        <p class="text-1xl text-center mt-2">Student | Frontend Developer</p>
+
+        <div class="text-center">
+            <a class="btn btn-success btn-sm mt-5 rounded-full" href="https://instagram.com/syaddadrhnp_">Follow </a>
+        </div>
+
+        <div class=" justify-center">
+            <div class="lg:mx-10 mx-5 mt-5 custom">
+                <a class="btn btn-block" href="https://github.com/syaddadraihanputra"><i
+                        class="ri-github-fill icon"></i>&nbsp;Github</a>
+            </div>
+            <div class="lg:mx-10 mx-5 mt-5 custom">
+                <a class="btn btn-block" href="https://syaddad-web.github.io"><i
+                        class="ri-newspaper-line icon"></i>&nbsp;My
+                    blog</a>
+            </div>
+            <div class="lg:mx-10 mx-5 mt-5 custom">
+                <a class="btn btn-block" href="https://instagram.com/syaddadrhnp_"><i
+                        class="ri-instagram-line icon"></i>&nbsp;Instagram</a>
+            </div>
+            <div class="lg:mx-10 mx-5 mt-5 custom">
+                <a class="btn btn-block" href="https://www.sololearn.com/profile/26702715/"><i
+                        class="ri-trophy-line icon"></i>&nbsp;Solo
+                    Learn</a>
+            </div>
+            <div class="lg:mx-10 mx-5 mt-5 custom">
+                <a class="btn btn-block"
+                    href="https://www.youtube.com/channel/UCtKtH5XQiXRQ0rjb76hUcPg?sub_confirmation=1"><i
+                        class="ri-youtube-line icon"></i>&nbsp;Youtube</a>
+            </div>
+        </div>
+
+        <footer class="footer footer-center p-5 bg-primary text-primary-content mt-10">
+            <div>
+                <p class="font-bold">
+                    Copyright &copy; 2022 | <a href="https://syaddadraihanputra.github.io">Syaddad</a></p>
+                <p>Powered by <a href="https://tailwindcss.com/"><b class="text-zinc-200">Tailwind</b></a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
