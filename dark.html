@@ -24,6 +24,7 @@
         .responsive {
             max-width: 500px;
             margin: 0px auto;
+            margin-bottom: 100px;
         }
 
         .icon {
@@ -34,6 +35,25 @@
         .btm-nav {
             max-width: 28rem;
             margin: 0px auto;
+        }
+
+        .project {
+            background-color: #00005C;
+            margin: 10px 20px ;
+            border-radius: 20px;
+            padding: 15px;
+        }
+
+        .project>a {
+            justify-content: center;
+            display: flex;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project:hover {
+            background-color: #000041;
         }
     </style>
 
@@ -112,6 +132,32 @@
                 <p>Powered by <a href="https://tailwindcss.com/"><b class="text-zinc-200">Tailwind</b></a></p>
             </div>
         </footer> -->
+
+        <p id="project"></p>
+
+        <script>
+            function loadData() {
+                fetch('https://api.github.com/users/SyaddadRaihanPutra/repos')
+                    .then((response) => response.json())
+                    .then((data) => {
+                        let output = ''
+                        let no = 1;
+                        data.forEach(el => {
+                            output += `   
+                                <div class="project bg-sky-500 hover:bg-red-300">
+                                        <a href="${el.html_url}">${el.name}</a>
+                                        <small style="color: white; display">Created: ${el.created_at}</small><br>
+                                        <small style="color: white;">Size - ${el.size} kb</small><br><br>
+                                        <small style="color: white; background-color: orangered; display: inline-block; padding: 5px; border-radius: 10px;">${el.language}</small>
+                                </div>
+                            `
+                        });
+                        document.getElementById('project').innerHTML = output
+                    });
+            }
+    
+            loadData();
+        </script>
 
         <div class="btm-nav">
             <a class="active bg-indigo-100 text-black" href="index.html">

@@ -23,6 +23,7 @@
         .responsive {
             max-width: 28rem;
             margin: 0px auto;
+            margin-bottom: 100px;
         }
 
         .icon {
@@ -37,9 +38,8 @@
 
         .project {
             background-color: #00005C;
-            margin: 10px 50px;
+            margin: 10px 20px ;
             border-radius: 20px;
-            border: 1px solid #000;
             padding: 15px;
         }
 
@@ -142,15 +142,13 @@
                         let output = ''
                         let no = 1;
                         data.forEach(el => {
-                            output += `
-                            <div class="responsive">    
-                                <div class="project" data-aos="zoom-in">
+                            output += `   
+                                <div class="project bg-sky-500 hover:bg-red-300">
                                         <a href="${el.html_url}">${el.name}</a>
                                         <small style="color: white; display">Created: ${el.created_at}</small><br>
                                         <small style="color: white;">Size - ${el.size} kb</small><br><br>
                                         <small style="color: white; background-color: orangered; display: inline-block; padding: 5px; border-radius: 10px;">${el.language}</small>
                                 </div>
-                            </div>
                             `
                         });
                         document.getElementById('project').innerHTML = output
