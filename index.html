@@ -34,6 +34,26 @@
             max-width: 28rem;
             margin: 0px auto;
         }
+
+        .project {
+            background-color: #00005C;
+            margin: 10px 50px;
+            border-radius: 20px;
+            border: 1px solid #000;
+            padding: 15px;
+        }
+
+        .project>a {
+            justify-content: center;
+            display: flex;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project:hover {
+            background-color: #000041;
+        }
     </style>
 
     <script type="module">
@@ -111,6 +131,34 @@
                 <p>Powered by <a href="https://tailwindcss.com/"><b class="text-zinc-200">Tailwind</b></a></p>
             </div>
         </footer> -->
+
+        <p id="project"></p>
+
+        <script>
+            function loadData() {
+                fetch('https://api.github.com/users/SyaddadRaihanPutra/repos')
+                    .then((response) => response.json())
+                    .then((data) => {
+                        let output = ''
+                        let no = 1;
+                        data.forEach(el => {
+                            output += `
+                            <div class="responsive">    
+                                <div class="project" data-aos="zoom-in">
+                                        <a href="${el.html_url}">${el.name}</a>
+                                        <small style="color: white; display">Created: ${el.created_at}</small><br>
+                                        <small style="color: white;">Size - ${el.size} kb</small><br><br>
+                                        <small style="color: white; background-color: orangered; display: inline-block; padding: 5px; border-radius: 10px;">${el.language}</small>
+                                </div>
+                            </div>
+                            `
+                        });
+                        document.getElementById('project').innerHTML = output
+                    });
+            }
+    
+            loadData();
+        </script>
 
         <div class="btm-nav">
             <a class="active bg-indigo-200" href="#">
