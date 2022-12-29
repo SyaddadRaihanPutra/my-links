@@ -17,6 +17,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.36.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- AOS Aniamtion -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Remix Icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -47,39 +50,39 @@
     <div class="responsive">
         <div class="text-center mt-10">
             <div class="avatar">
-                <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2" data-aos="fade-down">
                     <img src="profile.jpg" alt="profile" />
                 </div>
             </div>
         </div>
 
-        <p class="text-2xl text-center mt-10">Syaddad Raihan Putra</p>
-        <p class="text-1xl text-center mt-2">Student | Frontend Developer</p>
+        <p class="text-2xl text-center mt-10" data-aos="zoom-in">Syaddad Raihan Putra</p>
+        <p class="text-1xl text-center mt-2" data-aos="zoom-in">Student | Frontend Developer</p>
 
         <div class="text-center">
             <a class="btn btn-success btn-sm mt-5 rounded-full" href="https://instagram.com/syaddadrhnp_">Follow </a>
         </div>
 
         <div class="justify-center">
-            <div class="lg:mx-10 mx-5 mt-5 custom">
+            <div class="lg:mx-10 mx-5 mt-5 custom" data-aos="flip-left">
                 <a class="btn btn-block" href="https://github.com/syaddadraihanputra"><i
                         class="ri-github-fill icon"></i>&nbsp;Github</a>
             </div>
-            <div class="lg:mx-10 mx-5 mt-5 custom">
+            <div class="lg:mx-10 mx-5 mt-5 custom" data-aos="flip-left" data-aos-delay="500">
                 <a class="btn btn-block" href="https://syaddad-web.blogspot.com"><i
                         class="ri-newspaper-line icon"></i>&nbsp;My
                     blog</a>
             </div>
-            <div class="lg:mx-10 mx-5 mt-5 custom">
+            <div class="lg:mx-10 mx-5 mt-5 custom" data-aos="flip-left" data-aos-delay="600">
                 <a class="btn btn-block" href="https://instagram.com/syaddadrhnp_"><i
                         class="ri-instagram-line icon"></i>&nbsp;Instagram</a>
             </div>
-            <div class="lg:mx-10 mx-5 mt-5 custom">
+            <div class="lg:mx-10 mx-5 mt-5 custom" data-aos="flip-left" data-aos-delay="700">
                 <a class="btn btn-block" href="https://www.sololearn.com/profile/26702715/"><i
                         class="ri-trophy-line icon"></i>&nbsp;Solo
                     Learn</a>
             </div>
-            <div class="lg:mx-10 mx-5 mt-5 custom">
+            <div class="lg:mx-10 mx-5 mt-5 custom" data-aos="flip-left" data-aos-delay="800">
                 <a class="btn btn-block"
                     href="https://www.youtube.com/channel/UCtKtH5XQiXRQ0rjb76hUcPg?sub_confirmation=1"><i
                         class="ri-youtube-line icon"></i>&nbsp;Youtube</a>
@@ -93,16 +96,16 @@
         <div class="mx-5">
             <a href="https://www.sololearn.com/certificates/CT-CTMKRG0K"><img
                     class="rounded-2xl border-2 border-orange-500"
-                    src="https://api2.sololearn.com/v2/certificates/CT-CTMKRG0K/image/jpg" alt="HTML"></a>
+                    src="https://api2.sololearn.com/v2/certificates/CT-CTMKRG0K/image/jpg" alt="HTML" data-aos="flip-left"></a>
             <a href="https://www.sololearn.com/certificates/CT-0BFZMDQY"><img
                     class="rounded-2xl border-2 border-orange-500 mt-5"
-                    src="https://api2.sololearn.com/v2/certificates/CT-0BFZMDQY/image/jpg" alt="CSS"></a>
+                    src="https://api2.sololearn.com/v2/certificates/CT-0BFZMDQY/image/jpg" alt="CSS" data-aos="flip-left" data-aos-delay="600"></a>
             <a href="https://www.sololearn.com/certificates/CT-WABZGEMA"><img
                     class="rounded-2xl border-2 border-orange-500 mt-5"
-                    src="https://api2.sololearn.com/v2/certificates/CT-WABZGEMA/image/jpg" alt="RESPONSIVE WEB"></a>
+                    src="https://api2.sololearn.com/v2/certificates/CT-WABZGEMA/image/jpg" alt="RESPONSIVE WEB" data-aos="flip-left" data-aos-delay="700"></a>
             <a href="https://www.sololearn.com/certificates/CT-3OCV3P8Q"><img
                     class="rounded-2xl border-2 border-orange-500 mt-5"
-                    src="https://api2.sololearn.com/v2/certificates/CT-3OCV3P8Q/image/jpg" alt="PHP"></a>
+                    src="https://api2.sololearn.com/v2/certificates/CT-3OCV3P8Q/image/jpg" alt="PHP" data-aos="flip-left" data-aos-delay="800"></a>
         </div>
 
         <!-- <footer class="footer footer-center p-5 bg-primary text-primary-content mt-7 rounded-lg">
@@ -184,6 +187,11 @@
             </label>
         </div>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
