@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -47,7 +47,7 @@
 
 <body class="font-mono">
     <div class="responsive">
-        <div class="mt-10 text-center">
+        <div class="pt-10 text-center">
             <div class="avatar">
                 <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
                     data-aos="fade-down">
@@ -96,8 +96,7 @@
         <div class="mx-5">
             <a href="https://www.sololearn.com/certificates/CT-CTMKRG0K"><img
                     class="border-2 border-orange-500 rounded-2xl"
-                    src="https://api2.sololearn.com/v2/certificates/CT-CTMKRG0K/image/jpg" alt="HTML"
-                    ></a>
+                    src="https://api2.sololearn.com/v2/certificates/CT-CTMKRG0K/image/jpg" alt="HTML"></a>
             <a href="https://www.sololearn.com/certificates/CT-0BFZMDQY"><img
                     class="mt-5 border-2 border-orange-500 rounded-2xl"
                     src="https://api2.sololearn.com/v2/certificates/CT-0BFZMDQY/image/jpg" alt="CSS"
@@ -147,8 +146,9 @@
             loadData();
         </script> -->
 
-        <div class="m-10">
-            <footer class="p-5 footer footer-center bg-primary text-primary-content rounded-2xl" data-aos="zoom-in" data-aos-delay="800">
+        <div class="p-10">
+            <footer class="p-5 footer footer-center bg-primary text-primary-content rounded-2xl" data-aos="zoom-in"
+                data-aos-delay="800">
                 <div>
                     <p class="font-bold">
                         Copyright &copy; 2022 | <a href="https://syaddadraihanputra.github.io">Syaddad</a></p>
@@ -162,6 +162,27 @@
         </div>
     </div>
     </div>
+
+    <div class="pb-5 text-center cursor-pointer">
+        <span style="font-size: 30px;" onclick="setDarkMode(false)">😃</span>
+        <span style="font-size: 30px;" onclick="setDarkMode(true)">😎</span>
+        <h1>Dark Mode</h1>
+    </div>
+
+    <script>
+        if (localStorage.getItem('theme') == 'dark')
+            setDarkMode(true)
+
+        function setDarkMode(isDark) {
+            if (isDark) {
+                document.body.setAttribute('data-theme', 'dark')
+                localStorage.setItem('theme', 'dark')
+            } else {
+                document.body.setAttribute('data-theme', 'light')
+                localStorage.removeItem('theme')
+            }
+        }
+    </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
