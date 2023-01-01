@@ -173,6 +173,9 @@
         if (localStorage.getItem('theme') == 'dark')
             setDarkMode(true)
 
+        if(localStorage.getItem('theme') == 'light')
+            setDarkMode(false)
+
         function setDarkMode(isDark) {
             if (isDark) {
                 document.body.setAttribute('data-theme', 'dark')
